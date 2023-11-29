@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Conversion Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Unit Conversion Application</h1>
+    <div id="app">
+        <div class="dropdown">
+            <label for="mode-selection">Select Mode:</label>
+            <select id="mode-selection" onchange="modeSelection()">
+                <option value="conversion">Conversion Mode</option>
+                <option value="table">Table Display Mode</option>
+            </select>
+        </div>
+        <div class="dropdown">
+            <label for="unit-system-selection">Select Unit System:</label>
+            <select id="unit-system-selection" onchange="unitSystemSelection()">
+                <option value="pressure">Pressure Units</option>
+                <option value="flowrate">Flow Rate Units</option>
+            </select>
+        </div>
+        <div class="dropdown">
+            <label for="unit-selection">Select Unit:</label>
+            <select id="unit-selection" onchange="unitSelection()">
+                <!-- Units will be dynamically populated based on the selected unit system -->
+            </select>
+        </div>
+        <div class="input-field">
+            <label for="input-value">Input Int:</label>
+            <input type="number" id="input-value" onchange="valueInput()">
+        </div>
+        <div class="dropdown">
+            <label for="target-unit-selection">Select Target Unit:</label>
+            <!--<select id="target-unit-selection" onchange="targetUnitSelection()">-->
+            <select id="target-unit-selection" onchange="unitSelection()">
+                <!-- Units will be dynamically populated based on the selected unit system -->
+            </select>
+        </div>
+        <div id="conversion-result">
+            <!-- Conversion result or table will be dynamically populated here -->
+        </div>
+        <table id="conversion-table">
+            <tr>
+                <th>Unit</th>
+                <th>Converted Value</th>
+            </tr>
+        </table>
+
+    </div>
+    <script src="modeSelection.js"></script>
+    <script src="unitSystemSelection.js"></script>
+    <script src="unitSelection.js"></script>
+    <script src="conversion.js"></script>
+</body>
+</html>
+</h1>
