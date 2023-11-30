@@ -1,5 +1,8 @@
 // unitSystemSelection.js
 
+/**
+ * Handles the unit system selection.
+ */
 function unitSystemSelection() {
     // Get the selected unit system from the dropdown
     var selectedUnitSystem = document.getElementById('unit-system-selection').value;
